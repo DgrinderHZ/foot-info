@@ -55,7 +55,7 @@ ROOT_URLCONF = 'footinfo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'teams/teamplates')],
+        'DIRS': [os.path.join(BASE_DIR, 'teamplates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

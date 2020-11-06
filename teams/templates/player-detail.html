@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player details</title>
+</head>
+<body>
+    <h1>{{player.name}}</h1>
+    {% if player.is_captain %}
+    <h2>Captain of: {{ player.team }}</h2>
+    {% elif %}
+    <h2>Player of: {{ player.team }}</h2>
+    {% endif %}
+    <h2>Age: {{ player.age }}</h2>
+    <h2>Position in field: {{ player.get_position }}</h2>
+</body>
+</html>

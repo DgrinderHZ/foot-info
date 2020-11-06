@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from teams.views import HomePageView
+from teams.views import HomePageView, TeamsListView, ScoresListView, TeamDetailView, PlayerDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('teams/', HomePageView.as_view())
+    path('', HomePageView.as_view()),
+    path('teams/', TeamsListView.as_view(), name='teams_list'),
+    path('scores/', ScoresListView.as_view(), name='scores_list'),
+    path('players/<slug:name>', PlayerDetailView.as_view()),
+    path('teams/<slug:name>', TeamDetailView.as_view())
 ]
