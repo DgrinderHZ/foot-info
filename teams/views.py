@@ -1,7 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import View
 
+from .models import *
 # Create your views here.
 
-def HomePageView(request):
-    return HttpResponse('مرحبا')
+class HomePageView(View):
+    def get(self, request):
+        teams = Team.objects.all()
+        context = {'teams': teams}
+        return render(request, 'teams-list.html', context)
+
+

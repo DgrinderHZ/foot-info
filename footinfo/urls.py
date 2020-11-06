@@ -20,5 +20,5 @@ from teams.views import HomePageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', HomePageView)
+    path('teams/', HomePageView.as_view())
 ]
