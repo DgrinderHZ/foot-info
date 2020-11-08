@@ -23,6 +23,6 @@ urlpatterns = [
     path('', HomePageView.as_view()),
     path('teams/', TeamsListView.as_view(), name='teams_list'),
     path('scores/', ScoresListView.as_view(), name='scores_list'),
-    path('players/<slug:name>', PlayerDetailView.as_view()),
-    path('teams/<slug:name>', TeamDetailView.as_view())
+    path('players/<int:pk>', PlayerDetailView.as_view(), name='player-detail'),
+    path('teams/<int:pk>', TeamDetailView.as_view(), name='team-detail')
 ]

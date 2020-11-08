@@ -8,9 +8,9 @@
 <body>
     <h1>{{player.name}}</h1>
     {% if player.is_captain %}
-    <h2>Captain of: {{ player.team }}</h2>
-    {% elif %}
-    <h2>Player of: {{ player.team }}</h2>
+        <h2>Captain of: {{ player.team }}</h2>
+    {% else %}
+        <h2>Player of: {{ player.team }}</h2>
     {% endif %}
     <h2>Age: {{ player.age }}</h2>
     <h2>Position in field: {{ player.get_position }}</h2>
