@@ -6,9 +6,10 @@
     <title>Player details</title>
 </head>
 <body>
+    <a href="{% url 'teams-list'%}">Home</a>
     <h1>{{player.name}}</h1>
     {% if player.is_captain %}
-        <h2>Captain of: {{ player.team }}</h2>
+        <h2>Captain of: <a href="{% url 'team-detail' player.team.id%}">{{ player.team }}</a></h2>
     {% else %}
         <h2>Player of: {{ player.team }}</h2>
     {% endif %}
